@@ -36,5 +36,6 @@ function Header() {
     return header;
 };
 
+// select the parent container and appendChild
 const header = document.querySelector('.header-container');
 header.appendChild(Header());
