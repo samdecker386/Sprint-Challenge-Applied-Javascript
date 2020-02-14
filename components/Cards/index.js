@@ -58,7 +58,6 @@ function article(articles) {
             // create the author element
             const author = document.createElement('div');
             author.classList.add('author');
-            author.textContent = element.authorName;
             card.appendChild(author);
 
             // create the imageContainer element
