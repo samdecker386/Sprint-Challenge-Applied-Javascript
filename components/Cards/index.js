@@ -22,7 +22,7 @@
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
     // success
     .then(response => {
-        console.log(response.data);
+        console.log("second console.log", response.data);
         // select articles under response.data node
         const articles = response.data;
         // call a function (defined below) to add the elements to the page
@@ -35,14 +35,14 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
 
 // Create a function that is invoked when the API request is made. This function is used to layout the article elements on the page.
 function article(articles) {
-    // define array within an object
+    // define object array
     const articleContent = articles.articles;
-    // console.log(a);
+    console.log("third console.log", articleContent);
     // for...in statement will iterate over all properties of the object
-    for (var item in articleContent) {
-        // console.log(key, a[key]);
+    for (var key in articleContent) {
+        console.log("fourth console.log", key, articleContent[key]);
         // iterate over the items
-        articleContent[item].forEach(element => {
+        articleContent[key].forEach(element => {
             // console.log(element);
 
             // create the card element

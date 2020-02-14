@@ -12,7 +12,7 @@
 axios.get('https://lambda-times-backend.herokuapp.com/topics')
     // success  
     .then(response => {
-        console.log(response.data.topics);
+        console.log("first console.log", response.data.topics);
         // select data topics under response.data node
         const trendingTopics = response.data.topics;
         // call a function (defined below) to add the elements to the page
