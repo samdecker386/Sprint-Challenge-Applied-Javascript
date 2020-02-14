@@ -12,27 +12,27 @@
 // create a function that will create a header component that matches HTML
 function Header() {
 
-    // define new elements
+    // create the header element
     const header = document.createElement('div');
+    header.classList.add('header');
+
+    // create the date element
     const date = document.createElement('span');
-    const title = document.createElement('h1');
-    const temp = document.createElement('span');
-
-    // setup the structure of the elements
-    header.appendChild(date);
-    header.appendChild(title);
-    header.appendChild(temp);
-
-    // add classes to elements
-    header.classList.add('header');  
     date.classList.add('date');
+    date.textContent = 'March 28, 2019';
+    header.appendChild(date);
+
+    // create the title element
+    const title = document.createElement('h1');
+    title.textContent = 'Lambda Times';
+    header.appendChild(title);
+
+    // create the temp element
+    const temp = document.createElement('span');
     temp.classList.add('temp');
-
-    // add text content
-    date.textContent = 'March 28, 2019';   
-    title.textContent = 'Lambda Times';   
     temp.textContent = '98°';    
-
+    header.appendChild(temp);
+    
     return header;
 };
 

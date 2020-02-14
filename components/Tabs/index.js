@@ -23,7 +23,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
         console.log(error);
     });
 
-// create a function to layout the topic elements on the page that is invoked when the API request is made
+// Create a function that is invoked when the API request is made. This function is used to layout the topic elements on the page.
 function topics(items) {
     // select the topics div container
     const topicsDiv = document.querySelector('.topics');
